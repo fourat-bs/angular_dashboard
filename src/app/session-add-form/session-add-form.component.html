@@ -1,7 +1,7 @@
 <header>
   <h2>Ajouter une session de formation</h2>
 </header>
-<form #sessionItemForm="ngForm" (ngSubmit)="addSession(sessionItemForm.value)">
+<form #sessionItem="ngForm" (ngSubmit)="addSession(sessionItem)">
   <ul>
     <li>
       <label for="name">Name</label>
@@ -12,7 +12,7 @@
     </li>
     <li>
       <label for="track">Track</label>
-      <select name="track" id="track" ngModel>
+      <select name="track" id="track" ngModel required>
         <option value="MEAN">MEAN Stack</option>
 <option value="Angular">Angular</option>
 <option value="NodeJS">NodeJS</option>
@@ -40,6 +40,6 @@
     <input type="number" name="participants" id="participants"  ngModel required>
     </i>
   </ul>
-  <button type="submit" [disabled]="!sessionItemForm.form.valid">Enregistrer</button>
+  <button type="submit" [disabled]="!sessionItem.form.valid">Enregistrer</button>
 </form>
    

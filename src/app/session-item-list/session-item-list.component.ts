@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FakesessionitemService } from '../fakesessionitem.service';
-import { Session } from '../session';
 
 @Component({
   selector: 'app-session-item-list',
@@ -8,10 +7,10 @@ import { Session } from '../session';
   styleUrls: ['./session-item-list.component.css']
 })
 export class SessionItemListComponent implements OnInit {
-  sessionItems: Session[] | undefined;
+  sessionItems: { name: string; track: string; date: Date; duree: number; adress: string; participants: number; isCompleted: boolean; }[] | undefined;
   constructor(private sessionItemService: FakesessionitemService) { }
   ngOnInit(): void {
-    this.sessionItems= this.sessionItemService.get();
+    this.sessionItems= this.sessionItemService.getAllSessions();
   }
 
 }

@@ -50,20 +50,20 @@ td{
 }
 #t3{
     position: absolute;
-    top:115px;
-    left: 500px;
+    top:100px;
+    left: 300px;
     cursor: pointer;
 
 }
 #t4{
     position: absolute;
-    top:115px;
-    left: 600px;
+    top:100px;
+    left: 400px;
     cursor: pointer;
 }
 #Name{
     position: absolute;
-    right: 690px;
+    left: 10px;
     
    
 
