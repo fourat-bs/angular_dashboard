@@ -5,6 +5,8 @@ import { AddFormateurComponent } from './add-formateur/add-formateur.component';
 import { AddParticipantComponent } from './add-participant/add-participant.component';
 import { ForamteursComponent } from './foramteurs/foramteurs.component';
 import { ParticipantComponent } from './participant/participant.component';
+import { SessionAddFormComponent } from './session-add-form/session-add-form.component';
+import { SessionEditFormComponent } from './session-edit-form/session-edit-form.component';
 import { SessionsComponent } from './sessions/sessions.component';
 
 
@@ -28,6 +30,14 @@ const routes: Routes = [{
 },{
   path:'add-participant',
   component:AddParticipantComponent
+
+},{
+  path:'add-session',
+  component:SessionAddFormComponent
+
+},{
+  path:'edit-session',
+  component:SessionEditFormComponent
 
 }];
 

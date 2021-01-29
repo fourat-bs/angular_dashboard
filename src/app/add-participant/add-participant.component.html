@@ -1,51 +1,59 @@
 <h1 style="text-align: center;"> Ajouter Un Participan </h1>
 <div class="container">
     <br>
-    <form  >
+    <form  #f='ngForm' (submit)='add(f)'>
         <div class="form-group row">
           <label  class="col-sm-2 col-form-label">Nom &nbsp;:</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="nom" id="nom">
+            <input type="text" class="form-control" #nom='ngModel'  ngModel name="nom" id="nom" required>
+            <p class='alert alert-danger' *ngIf='nom.errors?.required && nom.touched'>Name is required</p>
           </div>
         </div>
-        <br>
+        
         <div class="form-group row">
           <label  class="col-sm-2 col-form-label">Prenom &nbsp;:</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="prenom" id="prenom">
+            <input type="text" class="form-control" #prenom="ngModel" ngModel name="prenom" id="prenom" required>
+            <p class='alert alert-danger' *ngIf='prenom.errors?.required && prenom.touched'> Prenom is required</p>
           </div>
         </div>
-        <br>
+        
         <div class="form-group row">
             <label  class="col-sm-2 col-form-label">Adressse &nbsp; :</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" name="adresse"id="adresse">
+              <input type="text" class="form-control" #adresse='ngModel'  ngModel name="adresse"id="adresse" required>
+              <p class='alert alert-danger' *ngIf='adresse.errors?.required && adresse.touched'> Adresse is required</p>
             </div>
           </div>
-          <br>
+          
           <div class="form-group row">
             <label  class="col-sm-2 col-form-label">Email &nbsp; :</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" name="email" id="email">
+              <input  type="text" class="form-control" #email='ngModel'  ngModel name="email" id="email" required email>
+              <p class='alert alert-danger'  *ngIf='email.errors?.required && email.touched'>Email is required</p>
+              <p class='alert alert-danger'  *ngIf='email.errors?.email && email.touched'>should enter email</p>
             </div>
           </div>
-          <br>
+          
           <div class="form-group row">
             <label  class="col-sm-2 col-form-label">Societe &nbsp; :</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" name="Societe" id="Societe">
+              <input type="text" class="form-control" #societe='ngModel'  ngModel name="societe" id="societe" required>
+              <p class='alert alert-danger'  *ngIf='societe.errors?.required && societe.touched'>Societe is required</p>
             </div>
           </div>
-          <br>
+          
           <div class="form-group row">
             <label  class="col-sm-2 col-form-label">Poste &nbsp; :</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" name="Poste" id="Poste">
+              <input type="text" class="form-control" #poste='ngModel'  ngModel name="poste" id="poste" required>
+              <p class='alert alert-danger'  *ngIf='poste.errors?.required && poste.touched'>Poste is required</p>
             </div>
           </div>
     
-        <button id='ajout' type="submit" class="btn btn-primary" style="background-color: #0B0B3B;color: white;"> Ajouter </button>
+        <button [disabled]='f.invalid'id='ajout'  type="submit" class="btn btn-primary" style="background-color: #0B0B3B;color: white;" > Ajouter </button>
     
     
       </form>
     </div>
+

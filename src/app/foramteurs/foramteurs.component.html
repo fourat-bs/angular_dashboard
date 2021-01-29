@@ -4,20 +4,24 @@
   
   
   <div class='List-Formateur'>
-    <table>
+    <table >
   <tbody>
     <tr>
       <th>    List Formateurs   </th>
     </tr>
-    <tr>
+    <div *ngFor="let formateur of formateurList;index as i">
+    <tr id='part'>
       
-      <td style="height: 50px;">
-       <span id='Name'>Mohamed sahli</span>  <img id='t1' src="assets/image006.png" width="55px" height="30px"><img id='t2' src="assets/image007.png" width="60px" height="30px">
-        
+      <td [ngClass]="{'first':i%2==0,'second':i%2==1}" >
+       <span id='Name'>{{i}}-{{formateur.name}}&nbsp; {{formateur.prenom}}&nbsp; de &nbsp;{{formateur.adresse}}&nbsp;/&nbsp;Email : {{formateur.email}}&nbsp;/&nbsp;Domaine &nbsp; dexpertise: &nbsp; {{formateur.domaine}}</span>  <img id='t1' src="assets/image006.png" width="55px" height="30px"> <img (click)='delete(formateur)' id='t2' src="assets/image007.png" width="60px" height="35px">
       </td>
+      
+      
     </tr>
+  </div>
   </tbody>
   </table>
   </div>
+    
     
     

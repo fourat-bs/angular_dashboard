@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FackeParticpantServiceService } from '../facke-particpant-service.service';
 
 @Component({
   selector: 'app-participant',
@@ -8,33 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParticipantComponent implements OnInit {
   
-
-  Participants = [
-    {
-      name:"ben salah",
-      prenom:"fourat",
-      adresse:"zarzis",
-      
-
-
-  },
-  {
-    name:"sahli",
-    prenom:"moahmed",
-    adresse:"Hammamet",
-
-
-  },
-  {
-    name:"salah",
-    prenom:"mohamed",
-    adresse:"bizerte",
-  
-
-  }];
-  constructor() { }
+  ParticipantList: { name: string; prenom: string; adresse: string; email: string; societe: string; poste: number; }[]
+ 
+  constructor(private Parts:FackeParticpantServiceService) { 
+    this.ParticipantList=this.Parts.getAllParticipant();
+  }
 
   ngOnInit(): void {
+    
   }
+  delete(participant:any){
+    this.Parts.deleteParticipant(participant);
+  }
+
 
 }

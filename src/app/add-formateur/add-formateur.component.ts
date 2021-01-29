@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FackeFormateurServiceService } from '../facke-formateur-service.service';
 
 @Component({
   selector: 'app-add-formateur',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddFormateurComponent implements OnInit {
 
-  constructor() { }
+  constructor(private formateur:FackeFormateurServiceService) { }
 
   ngOnInit(): void {
+  }
+  add(f:any){
+    this.formateur.addFormateurs(f.value.nom,  f.value.prenom, f.value.adresse, f.value.email, f.domaine);
+  
   }
 
 }

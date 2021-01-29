@@ -1,22 +1,26 @@
 <div class='ajout-refresh'>
-    <img [routerLink]="['/add-participant']" id='t3' SRC="assets/image005.png" width="80px" height="80px"> <img id='t4' SRC="assets/image008.png" width="80px" height="80px" >
-    </div>
-    
-    
-    <div class='List-Participant'>
-      <table>
-    <tbody *ngFor="let participant of Participants">
+  <img [routerLink]="['/add-participant']" id='t3' SRC="assets/image005.png" width="80px" height="80px"> <img id='t4' SRC="assets/image008.png" width="80px" height="80px" >
+  </div>
+  
+  
+  <div class='List-Participant'>
+    <table >
+  <tbody >
 
-      <tr>
-        <th>    List Participant  </th>
-      </tr>
-      <tr>
-        
-        <td style="height: 50px;">
-         <span id='Name'>{{participant.name}}</span>  <img id='t1' src="assets/image006.png" width="55px" height="30px"><img id='t2' src="assets/image007.png" width="60px" height="30px">
-        </td>
+    <tr>
+      <th>    List Participant  </th>
+    </tr >
+    
+      <div *ngFor="let participant of ParticipantList; index as i">
+        <tr id='part'>
+        <td >
+          <span id='Name'>{{i}}&nbsp;-&nbsp;{{participant.name}} &nbsp; {{participant.prenom}} &nbsp; de &nbsp; {{participant.adresse}} &nbsp; &nbsp;Emaril : {{participant.email}}--- &nbsp;Societe &nbsp;: &nbsp; {{participant.societe}} dans &nbsp; le &nbsp; poste &nbsp; {{participant.poste}}</span>  <img id='t1' src="assets/image006.png" width="55px" height="30px"><img (click)='delete(participant)' id='t2' src="assets/image007.png" width="60px" height="35px">
+         </td>
+        </tr>
+      </div>
+      
 
-      </tr>
-    </tbody>
-    </table>
-    </div>
+    
+  </tbody>
+  </table>
+  </div>

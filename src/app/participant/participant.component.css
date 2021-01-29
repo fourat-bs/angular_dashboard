@@ -1,37 +1,45 @@
 
 th{
-    width: 700px;
+    
     background-color:rgb(119, 119, 250);
     color:WHITE;
     text-align :center;
-    cursor: pointer;
+    
     
 }
+#part{
+   
+    border-collapse : separate;
+    border-spacing : 150px;
+    height: 50px;
+}
 td{
-    width: 700px;
-    text-align :center;
+    
+    
     background-color:rgb(175, 199, 245);
+    width: 1000px;
+    height: 20px;
 }
 .List-Participant{
-    width: 1000px;
     position: absolute;
-        top:300px;
-        left: 500px;
+        top:200px;
+        left: 340px;
 
 
     
 }
 #t1{
-    position: absolute;
+    position:absolute;
     cursor: pointer;
     
-    left: 580px;
+    left: 870px;
 
 }
 #t2{
     position: absolute;
     cursor: pointer;
-    left: 640px;
+    left: 930px;
+    
 
 }
 #formateur{
@@ -42,21 +50,28 @@ td{
 }
 #t3{
     position: absolute;
-    top:200px;
+    top:115px;
     left: 500px;
     cursor: pointer;
 
 }
 #t4{
     position: absolute;
-    top:200px;
+    top:115px;
     left: 600px;
     cursor: pointer;
 }
 #Name{
-    position: relative;
-    right: 250px;
-    font-size:17px;
+    position: absolute;
+    right: 690px;
+    
    
 
+}
+table{
+    font-family:cursive;
+    width: 1000px;
+}
+span{
+    font-size:15px;
 }

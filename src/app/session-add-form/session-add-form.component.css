@@ -1,6 +1,10 @@
 :host {
   display: block;
   padding: 10px;
+  background-color: teal;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 100px;
 }
 ul {
   list-style-type: none;

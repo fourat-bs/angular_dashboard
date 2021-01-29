@@ -4,9 +4,13 @@
     left:350px;
     top:190px;
 }
+
 input{
     width: 400px;
+    height: 30px;
+    font-family: cursive;
 }
+
    
 h1{
     font-family:fantasy;
@@ -21,5 +25,13 @@ h1{
     top:350px;
     width: 120px;
     height: 40px;
+
+}
+p{
+    width: 400px;
+    height: 30px;
+    font-family: cursive;
+    font-size: 12px;
+
 
 }
