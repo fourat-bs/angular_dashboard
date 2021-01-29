@@ -7,9 +7,13 @@ import { FakesessionitemService } from '../fakesessionitem.service';
   styleUrls: ['./session-item.component.css']
 })
 export class SessionItemComponent implements OnInit {
-  constructor() { }
+@Input() session: any;
+  constructor(private sessionItemService: FakesessionitemService) { }
 
   ngOnInit(): void {
   }
- 
+  onDelete()
+  {
+this.sessionItemService.delete(this.session);
+  }
 }

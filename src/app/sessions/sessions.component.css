@@ -1,4 +1,44 @@
 .sessions{
-    margin-top: 200px;
-    margin-left: 400px;
+    margin-top: 90px;
+
 }
+:host {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    width: 68px;
+    background-color: #53ace4;
+  }
+  nav .icon {
+    width: 48px;
+    height: 48px;
+    margin: 10px;
+  }
+  section {
+    width: 100%;
+    background-color: #32435b;
+  }
+  section > header {
+    color: #ffffff;
+    padding: 10px;
+  }
+  section > header > h1 {
+    font-size: 2em;
+  }
+  section > header .description {
+    font-style: italic;
+  }
+  .side-bar{
+      width: 50px;
+      height: 720px;
+      background-color: blue;
+      position: absolute;
+  }
+  .session{
+      margin-left: 50px;
+      margin-top: 50px;
+      position: absolute;
+  }

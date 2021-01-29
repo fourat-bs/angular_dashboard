@@ -8,9 +8,13 @@ import { FakesessionitemService } from '../fakesessionitem.service';
 })
 export class SessionAddFormComponent implements OnInit {
 
-  constructor(private sessionItemService: FakesessionitemService) { }
+  constructor(private sessionItemService: FakesessionitemService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    
   }
+  addSession(sessionItem: any) {
+    console.log(sessionItem);
+    }
 
 }

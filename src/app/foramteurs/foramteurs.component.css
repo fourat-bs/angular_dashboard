@@ -16,8 +16,8 @@ td{
 .List-Formateur{
     width: 1000px;
     position: absolute;
-        top:300px;
-        left: 500px;
+        top:200px;
+        left: 400px;
 
 
     
@@ -43,15 +43,15 @@ td{
 }
 #t3{
     position: absolute;
-    top:200px;
-    left: 500px;
+    top:100px;
+    left: 300px;
     cursor: pointer;
 
 }
 #t4{
     position: absolute;
-    top:200px;
-    left: 600px;
+    top:100px;
+    left: 400px;
     cursor: pointer;
 }
 #Name{

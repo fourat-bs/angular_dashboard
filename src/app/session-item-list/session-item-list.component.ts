@@ -8,8 +8,10 @@ import { Session } from '../session';
   styleUrls: ['./session-item-list.component.css']
 })
 export class SessionItemListComponent implements OnInit {
-  constructor() { }
+  sessionItems: Session[] | undefined;
+  constructor(private sessionItemService: FakesessionitemService) { }
   ngOnInit(): void {
+    this.sessionItems= this.sessionItemService.get();
   }
 
 }

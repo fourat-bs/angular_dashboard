@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LeftNavbarComponent } from './left-navbar/left-navbar.component';
@@ -14,6 +14,7 @@ import { SessionItemComponent } from './session-item/session-item.component';
 import { SessionItemListComponent } from './session-item-list/session-item-list.component';
 import { SessionAddFormComponent } from './session-add-form/session-add-form.component';
 import { SessionEditFormComponent } from './session-edit-form/session-edit-form.component';
+import {FakesessionitemService} from './fakesessionitem.service';
 
 @NgModule({
   declarations: [
@@ -32,9 +33,12 @@ import { SessionEditFormComponent } from './session-edit-form/session-edit-form.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [FakesessionitemService
+              
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
